@@ -1,0 +1,60 @@
+section{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.loader{
+    width: 300px;
+    height: 100px;
+    background-color: #000;
+    position: relative;
+    filter: blur(10px) contrast(20);
+}
+
+.drop1, .drop2{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.drop1{
+    background-color: yellow;
+    left: 10%;
+    animation: anil ease-in-out infinite 2.5s;
+}
+
+.drop2{
+    background-color: red;
+    right: 10%;
+    animation: anil2 ease-in-out infinite 2.5s;
+}
+
+@keyframes anil {
+    0%{
+        left: 10%;
+    }
+    50%{
+        left: 45%;
+    }
+    100%{
+        left: 10%
+    }
+}
+
+@keyframes anil2 {
+    0%{
+        right: 10%;
+    }
+    50%{
+        right: 45%;
+    }
+    100%{
+        right: 10%
+    }
+}
